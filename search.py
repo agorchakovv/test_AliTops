@@ -1,7 +1,7 @@
 import requests
 # import time
 # from fcntl import LOCK_EX
-from baseApp import BasePage
+from base_app import BasePage
 from locators import Locators
 # from selenium.webdriver.common.action_chains import ActionChains
 
