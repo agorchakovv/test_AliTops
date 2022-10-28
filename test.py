@@ -1,6 +1,5 @@
-from ATPages import SearchHelper 
-from BaseApp import BasePage
-import requests
+from search import SearchHelper 
+from baseApp import BasePage
 import pytest
 
 @pytest.fixture
@@ -9,19 +8,15 @@ def back_browser(browser):
    browser.get(main_page.base_url)
    yield browser
 
-#Проверка главной страницы расширения
+#Test main page
 def test_main(browser):
-    main_page = BasePage(browser)
-    main_page.go_to_site()
-    response = requests.head(browser.current_url)
-    assert response.status_code == 200
+    main_page = SearchHelper(browser)
+    main_page.main_page(browser)
 
-#Открываем коллекцию горячей подборки
+#Test hot compilation
 def test_collection1(browser):
     main_page = SearchHelper(browser)
-    main_page.click_button_collection1()
-    response = requests.head(browser.current_url)
-    assert response.status_code == 200
+    main_page.click_button_collection1(browser)
 
 # #Клик на фильтр 1
 # def test_filter1(browser):
