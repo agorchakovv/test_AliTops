@@ -8,35 +8,6 @@ def back_browser(browser):
    browser.get(main_page.base_url)
    yield browser
 
-#Test main page
-def test_main(browser):
-    main_page = SearchHelper(browser)
-    main_page.main_page(browser)
-
-#Test hot compilation
-def test_collection1(browser):
-    main_page = SearchHelper(browser)
-    main_page.click_button_collection1(browser)
-
-# #Клик на фильтр 1
-# def test_filter1(browser):
-#     main_page = SearchHelper(browser)
-#     main_page.click_filter(browser)
-
-# #Бестселлеры
-# def test_collection2(back_browser):
-#     main_page = SearchHelper(back_browser)
-#     main_page.click_button_collection2()
-#     response = requests.head(back_browser.current_url)
-#     assert response.status_code == 200
-
-# #Покупатели рекомендуют
-# def test_collection3(back_browser):
-#     main_page = SearchHelper(back_browser)
-#     main_page.click_button_collection3()
-#     response = requests.head(back_browser.current_url)
-#     assert response.status_code == 200
-
 # #1 Популярная категория
 # def test_popular_category_0(back_browser, browser):
 #     main_page = SearchHelper(back_browser)

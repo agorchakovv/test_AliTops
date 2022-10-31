@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 
 class Locators:
+    LOCATOR_COMPILATIONS_ELEMENT = (By.XPATH, '//*[@id="product_list"]')
     LOCATOR_ELEMENT = (By.XPATH, '//*[@id="product_list"]/li')
     LOCATOR_COLLECTION = (By.XPATH, '//a[@id="collection_link"]')
     LOCATOR_FILTER = (By.XPATH, '//button[@id="filter_dropdown"]')

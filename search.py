@@ -14,7 +14,6 @@ class SearchHelper(BasePage):
         main_page.go_to_site()
         search_elements = self.find_elements(Locators.LOCATOR_ELEMENT)
         response = requests.head(browser.current_url)
-        print(f"++++++++++++++++++  {search_elements}")
         assert response.status_code == 200
         assert len(search_elements) == 30
 
@@ -24,33 +23,42 @@ class SearchHelper(BasePage):
         search_field.click()
         search_elements = self.find_elements(Locators.LOCATOR_ELEMENT)
         response = requests.head(browser.current_url)
-        print("++++++++++++++++++", search_elements, "++++++++++++++")
         assert response.status_code == 200
         assert len(search_elements) == 60
 
-    # #Бестселлеры
-    # def click_button_collection2(self):
-    #     search_field = self.find_elements(Locators.LOCATOR_COLLECTION)[1]
-    #     search_field.click()
+    #Bestsellers
+    def click_button_collection2(self, browser):
+        search_field = self.find_elements(Locators.LOCATOR_COLLECTION)[1]
+        search_field.click()
+        search_elements = self.find_elements(Locators.LOCATOR_ELEMENT)
+        response = requests.head(browser.current_url)
+        assert response.status_code == 200
+        assert len(search_elements) == 60
 
-    # #Покупатели рекомендуют
-    # def click_button_collection3(self):
-    #     search_field = self.find_elements(Locators.LOCATOR_COLLECTION)[2]
-    #     search_field.click()
+    #Buyers recommend
+    def click_button_collection3(self, browser):
+        search_field = self.find_elements(Locators.LOCATOR_COLLECTION)[2]
+        search_field.click()
+        search_elements = self.find_elements(Locators.LOCATOR_ELEMENT)
+        response = requests.head(browser.current_url)
+        assert response.status_code == 200
+        assert len(search_elements) == 60
 
-    # #Клик на фильтр и выпадающий список
-    # def click_filter(self,browser):
+    #Click on the filter and dropdown list
+    def click_filter(self,browser):
         
-    #     i = 0
+        i = 0
 
-    #     for i in range(5):
-    #         search_field = self.find_element(Locators.LOCATOR_FILTER)
-    #         search_field.click()
-    #         search_fields = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
-    #         search_fields.click()
-    #         response = requests.head(browser.current_url)
-    #         assert response.status_code == 200
-    #         i += 1
+        for i in range(5):
+            search_field = self.find_element(Locators.LOCATOR_FILTER)
+            search_field.click()
+            search_fields = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
+            search_fields.click()
+            search_elements = self.find_elements(Locators.LOCATOR_ELEMENT)
+            response = requests.head(browser.current_url)
+            assert response.status_code == 200
+            assert len(search_elements) == 60
+            i += 1
 
     # #Клик на 1 популярную категорию и ее подкатегории
     # def click_popular_category_0(self, browser):
