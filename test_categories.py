@@ -1,6 +1,6 @@
-from search import SearchHelper 
-from base_app import BasePage
 import pytest
+from search_categories import SearchHelper 
+from base_app import BasePage
 
 @pytest.fixture
 def back_browser(browser):
@@ -8,10 +8,10 @@ def back_browser(browser):
    browser.get(main_page.base_url)
    yield browser
 
-# #1 Популярная категория
-# def test_popular_category_0(back_browser, browser):
-#     main_page = SearchHelper(back_browser)
-#     main_page.click_popular_category_0(browser)
+#1 popular category
+def test_popular_category_0(back_browser, browser):
+    main_page = SearchHelper(back_browser)
+    main_page.click_popular_category_0(browser)
 
 # #2 Популярная категория
 # def test_popular_category_1(back_browser, browser):
@@ -47,25 +47,15 @@ def back_browser(browser):
 # def test_input(back_browser):
 #     main_page = SearchHelper(back_browser)
 #     main_page.click_input()
-#     response = requests.head(back_browser.current_url)
-#     assert response.status_code == 200
+
 
 # #Клик на фильтр 2
 # def test_filter2(browser):
 #     main_page = SearchHelper(browser)
 #     main_page.click_filter(browser)
 
-# #Добавление в избранное и авторизация
-# def test_favorite(browser):
-#     main_page = SearchHelper(browser)
-#     main_page.click_favorite(browser)
-
 # #Каталог
 # def test_catalog(back_browser):
 #     main_page = SearchHelper(back_browser)
 #     main_page.click_catalog(back_browser)
 
-# #Изменение валюты
-# def test_currency(back_browser):
-#     main_page = SearchHelper(back_browser)
-#     main_page.click_currency(back_browser)

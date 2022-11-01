@@ -1,5 +1,5 @@
 import pytest
-from search import SearchHelper 
+from search_main import SearchHelper 
 from base_app import BasePage
 
 #Fixture open main page
@@ -28,8 +28,13 @@ def test_filter1(browser):
 def test_collection2(back_browser):
     main_page = SearchHelper(back_browser)
     main_page.click_button_collection2(back_browser)
-
+ 
 #Click on the buyers recommend compilation
 def test_collection3(back_browser):
     main_page = SearchHelper(back_browser)
     main_page.click_button_collection3(back_browser)
+
+# #Currency change
+# def test_currency(back_browser):
+#     main_page = SearchHelper(back_browser)
+#     main_page.click_currency(back_browser)
