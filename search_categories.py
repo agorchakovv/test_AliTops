@@ -3,132 +3,108 @@ import time
 from base_app import BasePage
 from locators import Locators
 
-#Search for elements
 class SearchHelper(BasePage):
 
-    #Click on 1 popular category and its subcategories
-    def click_popular_category_0(self, browser):
-
-        i = 0
+    def popular_category_0(self, browser):
 
         for i in range(5):
-            search_field = self.find_element(Locators.LOCATOR_POPULAR_CATEGORY_0)
-            search_field.click()
-            search_fields = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
-            search_fields.click()
+            search_popular_category = self.find_element(Locators.LOCATOR_POPULAR_CATEGORY_0)
+            search_popular_category.click()
+            search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
+            search_dropdown.click()
             time.sleep (1.5)
-            search_elements = self.find_elements(Locators.LOCATOR_ELEMENT)
-            print (len(search_elements))
+            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
             response = requests.head(browser.current_url)
-            assert response.status_code == 200, f'Сайт вернул код {response.status_code}'
-            assert len(search_elements) == 70, f'Количество элементов {len(search_elements)}'
-            i += 1
+            # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
+            assert response.status_code == 200, f'The site returned the code - {response.status_code}'
+            assert len(search_products) == 70, f'Amount of elements - {len(search_products)}'
 
-    # #Click on 2 popular category and its subcategories
-    # def click_popular_category_1(self, browser):
+    def popular_category_1(self, browser):
 
-    #     i = 0
+        for i in range(5):
+            search_popular_category = self.find_element(Locators.LOCATOR_POPULAR_CATEGORY_0)
+            search_popular_category.click()
+            search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
+            search_dropdown.click()
+            time.sleep (1.5)
+            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
+            response = requests.head(browser.current_url)
+            # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
+            assert response.status_code == 200, f'The site returned the code - {response.status_code}'
+            assert len(search_products) == 70, f'Amount of elements - {len(search_products)}'
 
-    #     for i in range(5):
-    #         search_field = self.find_element(Locators.LOCATOR_POPULAR_CATEGORY_1)
-    #         search_field.click()
-    #         search_fields = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
-    #         search_fields.click()
-    #         search_elements = self.find_elements(Locators.LOCATOR_ELEMENT)
-    #         time.sleep (1)
-    #         response = requests.head(browser.current_url)
-    #         assert response.status_code == 200, f'Сайт вернул код {response.status_code}'
-    #         assert len(search_elements) == 70, f'Количество элементов {len(search_elements)}'
-    #         i += 1
+    def popular_category_2(self, browser):
 
-    # #Click on 3 popular category and its subcategories
-    # def click_popular_category_2(self, browser):
+        for i in range(5):
+            search_popular_category = self.find_element(Locators.LOCATOR_POPULAR_CATEGORY_0)
+            search_popular_category.click()
+            search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
+            search_dropdown.click()
+            time.sleep (1.5)
+            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
+            response = requests.head(browser.current_url)
+            # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
+            assert response.status_code == 200, f'The site returned the code - {response.status_code}'
+            assert len(search_products) == 70, f'Amount of elements - {len(search_products)}'
 
-    #     i = 0
+    def popular_category_3(self, browser):
 
-    #     for i in range(5):
-    #         search_field = self.find_element(Locators.LOCATOR_POPULAR_CATEGORY_2)
-    #         search_field.click()
-    #         search_fields = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
-    #         search_fields.click()
-    #         search_elements = self.find_elements(Locators.LOCATOR_ELEMENT)
-    #         time.sleep (1)
-    #         response = requests.head(browser.current_url)
-    #         assert response.status_code == 200, f'Сайт вернул код {response.status_code}'
-    #         assert len(search_elements) == 70, f'Количество элементов {len(search_elements)}'
-    #         i += 1
+        for i in range(4):
+            search_popular_category = self.find_element(Locators.LOCATOR_POPULAR_CATEGORY_0)
+            search_popular_category.click()
+            search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
+            search_dropdown.click()
+            time.sleep (1.5)
+            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
+            response = requests.head(browser.current_url)
+            # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
+            assert response.status_code == 200, f'The site returned the code - {response.status_code}'
+            assert len(search_products) == 70, f'Amount of elements - {len(search_products)}'
 
-    # #Click on 4 popular category and its subcategories
-    # def click_popular_category_3(self, browser):
+    def popular_category_4(self, browser):
 
-    #     i = 0
+        for i in range(5):
+            search_popular_category = self.find_element(Locators.LOCATOR_POPULAR_CATEGORY_0)
+            search_popular_category.click()
+            search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
+            search_dropdown.click()
+            time.sleep (1.5)
+            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
+            response = requests.head(browser.current_url)
+            # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
+            assert response.status_code == 200, f'The site returned the code - {response.status_code}'
+            assert len(search_products) == 70, f'Amount of elements - {len(search_products)}'
 
-    #     for i in range(4):
-    #         search_field = self.find_element(Locators.LOCATOR_POPULAR_CATEGORY_3)
-    #         search_field.click()
-    #         search_fields = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
-    #         search_fields.click()
-    #         search_elements = self.find_elements(Locators.LOCATOR_ELEMENT)
-    #         time.sleep (1)
-    #         response = requests.head(browser.current_url)
-    #         assert response.status_code == 200, f'Сайт вернул код {response.status_code}'
-    #         assert len(search_elements) == 70, f'Количество элементов {len(search_elements)}'
-    #         i += 1
+    def popular_category_5(self, browser):
 
-    # #Click on 5 popular category and its subcategories
-    # def click_popular_category_4(self, browser):
+        for i in range(5):
+            search_popular_category = self.find_element(Locators.LOCATOR_POPULAR_CATEGORY_0)
+            search_popular_category.click()
+            search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
+            search_dropdown.click()
+            time.sleep (1.5)
+            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
+            response = requests.head(browser.current_url)
+            # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
+            assert response.status_code == 200, f'The site returned the code - {response.status_code}'
+            assert len(search_products) == 70, f'Amount of elements - {len(search_products)}'
 
-    #     i = 0
+    def popular_category_6(self, browser):
 
-    #     for i in range(5):
-    #         search_field = self.find_element(Locators.LOCATOR_POPULAR_CATEGORY_4)
-    #         search_field.click()
-    #         search_fields = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
-    #         search_fields.click()
-    #         search_elements = self.find_elements(Locators.LOCATOR_ELEMENT)
-    #         time.sleep (1)
-    #         response = requests.head(browser.current_url)
-    #         assert response.status_code == 200, f'Сайт вернул код {response.status_code}'
-    #         assert len(search_elements) == 70, f'Количество элементов {len(search_elements)}'
-    #         i += 1
-
-    # #Click on 6 popular category and its subcategories
-    # def click_popular_category_5(self, browser):
-
-    #     i = 0
-
-    #     for i in range(5):
-    #         search_field = self.find_element(Locators.LOCATOR_POPULAR_CATEGORY_5)
-    #         search_field.click()
-    #         search_fields = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
-    #         search_fields.click()
-    #         search_elements = self.find_elements(Locators.LOCATOR_ELEMENT)
-    #         time.sleep (1)
-    #         response = requests.head(browser.current_url)
-    #         assert response.status_code == 200, f'Сайт вернул код {response.status_code}'
-    #         assert len(search_elements) == 70, f'Количество элементов {len(search_elements)}'
-    #         i += 1
-
-    # #Click on 7 popular category and its subcategories
-    # def click_popular_category_6(self, browser):
-
-    #     i = 0
-
-    #     for i in range(5):
-    #         search_field = self.find_element(Locators.LOCATOR_POPULAR_CATEGORY_6)
-    #         search_field.click()
-    #         search_fields = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
-    #         search_fields.click()
-    #         search_elements = self.find_elements(Locators.LOCATOR_ELEMENT)
-    #         time.sleep (1)
-    #         response = requests.head(browser.current_url)
-    #         assert response.status_code == 200, f'Сайт вернул код {response.status_code}'
-    #         assert len(search_elements) == 70, f'Количество элементов {len(search_elements)}'
-    #         i += 1
+        for i in range(5):
+            search_popular_category = self.find_element(Locators.LOCATOR_POPULAR_CATEGORY_0)
+            search_popular_category.click()
+            search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
+            search_dropdown.click()
+            time.sleep (1.5)
+            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
+            response = requests.head(browser.current_url)
+            # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
+            assert response.status_code == 200, f'The site returned the code - {response.status_code}'
+            assert len(search_products) == 70, f'Amount of elements - {len(search_products)}'
 
     # #Категории
     # def click_catalog(self, browser):
-    #     i = 0
 
     #     for i in range(16):
     #         search_field = self.find_element(Locators.LOCATOR_CATALOG)
