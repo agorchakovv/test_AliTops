@@ -34,7 +34,7 @@ def test_collection3(back_browser):
     main_page = SearchHelper(back_browser)
     main_page.click_button_collection3(back_browser)
 
-# #Currency change
-# def test_currency(back_browser):
-#     main_page = SearchHelper(back_browser)
-#     main_page.click_currency(back_browser)
+#Currency change
+def test_currency(back_browser):
+    main_page = SearchHelper(back_browser)
+    main_page.click_currency(back_browser)

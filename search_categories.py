@@ -16,11 +16,12 @@ class SearchHelper(BasePage):
             search_field.click()
             search_fields = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
             search_fields.click()
+            time.sleep (1.5)
             search_elements = self.find_elements(Locators.LOCATOR_ELEMENT)
-            time.sleep (1)
+            print (len(search_elements))
             response = requests.head(browser.current_url)
-            assert response.status_code == 200
-            assert len(search_elements) == 70
+            assert response.status_code == 200, f'Сайт вернул код {response.status_code}'
+            assert len(search_elements) == 70, f'Количество элементов {len(search_elements)}'
             i += 1
 
     # #Click on 2 popular category and its subcategories
@@ -36,8 +37,8 @@ class SearchHelper(BasePage):
     #         search_elements = self.find_elements(Locators.LOCATOR_ELEMENT)
     #         time.sleep (1)
     #         response = requests.head(browser.current_url)
-    #         assert response.status_code == 200
-    #         assert len(search_elements) == 70
+    #         assert response.status_code == 200, f'Сайт вернул код {response.status_code}'
+    #         assert len(search_elements) == 70, f'Количество элементов {len(search_elements)}'
     #         i += 1
 
     # #Click on 3 popular category and its subcategories
@@ -53,8 +54,8 @@ class SearchHelper(BasePage):
     #         search_elements = self.find_elements(Locators.LOCATOR_ELEMENT)
     #         time.sleep (1)
     #         response = requests.head(browser.current_url)
-    #         assert response.status_code == 200
-    #         assert len(search_elements) == 70
+    #         assert response.status_code == 200, f'Сайт вернул код {response.status_code}'
+    #         assert len(search_elements) == 70, f'Количество элементов {len(search_elements)}'
     #         i += 1
 
     # #Click on 4 popular category and its subcategories
@@ -70,8 +71,8 @@ class SearchHelper(BasePage):
     #         search_elements = self.find_elements(Locators.LOCATOR_ELEMENT)
     #         time.sleep (1)
     #         response = requests.head(browser.current_url)
-    #         assert response.status_code == 200
-    #         assert len(search_elements) == 70
+    #         assert response.status_code == 200, f'Сайт вернул код {response.status_code}'
+    #         assert len(search_elements) == 70, f'Количество элементов {len(search_elements)}'
     #         i += 1
 
     # #Click on 5 popular category and its subcategories
@@ -87,8 +88,8 @@ class SearchHelper(BasePage):
     #         search_elements = self.find_elements(Locators.LOCATOR_ELEMENT)
     #         time.sleep (1)
     #         response = requests.head(browser.current_url)
-    #         assert response.status_code == 200
-    #         assert len(search_elements) == 70
+    #         assert response.status_code == 200, f'Сайт вернул код {response.status_code}'
+    #         assert len(search_elements) == 70, f'Количество элементов {len(search_elements)}'
     #         i += 1
 
     # #Click on 6 popular category and its subcategories
@@ -104,8 +105,8 @@ class SearchHelper(BasePage):
     #         search_elements = self.find_elements(Locators.LOCATOR_ELEMENT)
     #         time.sleep (1)
     #         response = requests.head(browser.current_url)
-    #         assert response.status_code == 200
-    #         assert len(search_elements) == 70
+    #         assert response.status_code == 200, f'Сайт вернул код {response.status_code}'
+    #         assert len(search_elements) == 70, f'Количество элементов {len(search_elements)}'
     #         i += 1
 
     # #Click on 7 popular category and its subcategories
@@ -121,8 +122,8 @@ class SearchHelper(BasePage):
     #         search_elements = self.find_elements(Locators.LOCATOR_ELEMENT)
     #         time.sleep (1)
     #         response = requests.head(browser.current_url)
-    #         assert response.status_code == 200
-    #         assert len(search_elements) == 70
+    #         assert response.status_code == 200, f'Сайт вернул код {response.status_code}'
+    #         assert len(search_elements) == 70, f'Количество элементов {len(search_elements)}'
     #         i += 1
 
     # #Категории
