@@ -1,9 +1,8 @@
 from selenium.webdriver.common.by import By
 
 class Locators:
-    LOCATOR_COMPILATIONS_ELEMENT = (By.XPATH, '//*[@id="product_list"]')
-    LOCATOR_ELEMENT = (By.XPATH, '//*[@id="product_list"]/li')
-    LOCATOR_COLLECTION = (By.XPATH, '//a[@id="collection_link"]')
+    LOCATOR_PRODUCT = (By.XPATH, '//*[@id="product_list"]/li')
+    LOCATOR_COMPILATION = (By.XPATH, '//a[@id="collection_link"]')
     LOCATOR_FILTER = (By.XPATH, '//button[@id="filter_dropdown"]')
     LOCATOR_DROPDOWN = (By.XPATH, '//*[@id="dropdown_item"]/li')
     LOCATOR_POPULAR_CATEGORY_0 = (By.XPATH, '//button[@id="popular_categories_item_0"]')
@@ -16,7 +15,7 @@ class Locators:
     LOCATOR_INPUT = (By.XPATH, '//input[@id="search_input"]')
     LOCATOR_BUTTON_INPUT = (By.XPATH, '//button[@id="search_button"]')
     LOCATOR_FAVORITE = (By.XPATH, '//*[@id="product_list__item_0"]/div/div/button')
-    LOCATOR_PRODUCT = (By.XPATH, '//li[@id="product_list__item_0"]')
+    LOCATOR_PRODUCTS = (By.XPATH, '//li[@id="product_list__item_0"]')
     LOCATOR_AUTHORIZATION = (By.XPATH, '//*[contains(text(), "Продолжить без авторизации")]')
     LOCATOR_CURRANCY = (By.XPATH, '//button[@id="footer_change_currancy"]')
     LOCATOR_CATALOG = (By.XPATH, '//button[@id="catalog_button"]')

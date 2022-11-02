@@ -9,32 +9,28 @@ def back_browser(browser):
    browser.get(main_page.base_url)
    yield browser
 
-#Test main page
 def test_main(browser):
     main_page = SearchHelper(browser)
     main_page.main_page(browser)
 
-#Click on the hot compilation
-def test_collection1(browser):
+def test_hot_compilation(browser):
     main_page = SearchHelper(browser)
-    main_page.click_button_collection1(browser)
+    main_page.hot_compilation(browser)
 
-#Click on the compilation filter 
-def test_filter1(browser):
+#Click on the hot compilation filter 
+def test_filter(browser):
     main_page = SearchHelper(browser)
-    main_page.click_filter(browser)
+    main_page.filter(browser)
 
-#Click on the bestellers compilation
-def test_collection2(back_browser):
+def test_bestsellers(back_browser):
     main_page = SearchHelper(back_browser)
-    main_page.click_button_collection2(back_browser)
+    main_page.bestsellers(back_browser)
  
-#Click on the buyers recommend compilation
-def test_collection3(back_browser):
+def test_buyers_recommend(back_browser):
     main_page = SearchHelper(back_browser)
-    main_page.click_button_collection3(back_browser)
+    main_page.buyers_recommend(back_browser)
 
 #Currency change
 def test_currency(back_browser):
     main_page = SearchHelper(back_browser)
-    main_page.click_currency(back_browser)
+    main_page.currency(back_browser)
