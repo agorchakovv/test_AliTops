@@ -20,4 +20,3 @@ class Locators:
     # LOCATOR_FAVORITE = (By.XPATH, '//*[@id="product_list__item_0"]/div/div/button')
     # LOCATOR_PRODUCT = (By.XPATH, '//li[@id="product_list__item_0"]')
     # LOCATOR_AUTHORIZATION = (By.XPATH, '//*[contains(text(), "Продолжить без авторизации")]')
-    # LOCATOR_CATEGORY = (By.XPATH, '//*[@id="catalog-root-menu"]/li')
