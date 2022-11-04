@@ -80,7 +80,7 @@ class SearchHelper(BasePage):
             search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
             search_dropdown_text = search_dropdown.text
             search_dropdown.click()
-            time.sleep (2)
+            time.sleep (1.5)
             search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
             response = requests.head(browser.current_url)
             assert response.status_code == 200, f'The site returned the code - {response.status_code}'
