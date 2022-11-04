@@ -88,4 +88,3 @@ class SearchHelper(BasePage):
 
             for search in search_products:
                 assert (currency[search_dropdown_text.split()[0]] in search.text), f'Error in product - {search.text}'
-
