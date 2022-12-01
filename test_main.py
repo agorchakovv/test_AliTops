@@ -30,7 +30,6 @@ def test_buyers_recommend(back_browser):
     main_page = SearchHelper(back_browser)
     main_page.buyers_recommend(back_browser)
 
-#Currency change
 def test_currency(back_browser):
     main_page = SearchHelper(back_browser)
     main_page.currency(back_browser)

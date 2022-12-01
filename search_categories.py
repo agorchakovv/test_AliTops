@@ -12,12 +12,13 @@ class SearchHelper(BasePage):
             search_popular_category.click()
             search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
             search_dropdown.click()
-            time.sleep (1.5)
+            time.sleep (2)
             search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
             response = requests.head(browser.current_url)
+            url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
             assert response.status_code == 200, f'The site returned the code - {response.status_code}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products)}'
+            assert len(search_products) == 70, f'Amount of elements - {len(search_products)} Error in url - {url}'
 
     def popular_category_1(self, browser):
 
@@ -26,12 +27,13 @@ class SearchHelper(BasePage):
             search_popular_category.click()
             search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
             search_dropdown.click()
-            time.sleep (1.5)
+            time.sleep (2)
             search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
             response = requests.head(browser.current_url)
+            url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
             assert response.status_code == 200, f'The site returned the code - {response.status_code}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products)}'
+            assert len(search_products) == 70, f'Amount of elements - {len(search_products)} Error in url - {url}'
 
     def popular_category_2(self, browser):
 
@@ -40,26 +42,28 @@ class SearchHelper(BasePage):
             search_popular_category.click()
             search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
             search_dropdown.click()
-            time.sleep (1.5)
+            time.sleep (2)
             search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
             response = requests.head(browser.current_url)
+            url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
             assert response.status_code == 200, f'The site returned the code - {response.status_code}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products)}'
+            assert len(search_products) == 70, f'Amount of elements - {len(search_products)} Error in url - {url}'
 
     def popular_category_3(self, browser):
 
-        for i in range(4):
+        for i in range(3):
             search_popular_category = self.find_element(Locators.LOCATOR_POPULAR_CATEGORY_3)
             search_popular_category.click()
             search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
             search_dropdown.click()
-            time.sleep (1.5)
+            time.sleep (2)
             search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
             response = requests.head(browser.current_url)
+            url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
             assert response.status_code == 200, f'The site returned the code - {response.status_code}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products)}'
+            assert len(search_products) == 70, f'Amount of elements - {len(search_products)} Error in url - {url}'
 
     def popular_category_4(self, browser):
 
@@ -68,12 +72,13 @@ class SearchHelper(BasePage):
             search_popular_category.click()
             search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
             search_dropdown.click()
-            time.sleep (1.5)
+            time.sleep (2)
             search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
             response = requests.head(browser.current_url)
+            url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
             assert response.status_code == 200, f'The site returned the code - {response.status_code}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products)}'
+            assert len(search_products) == 70, f'Amount of elements - {len(search_products)} Error in url - {url}'
 
     def popular_category_5(self, browser):
 
@@ -82,12 +87,13 @@ class SearchHelper(BasePage):
             search_popular_category.click()
             search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
             search_dropdown.click()
-            time.sleep (1.5)
+            time.sleep (2)
             search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
             response = requests.head(browser.current_url)
+            url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
             assert response.status_code == 200, f'The site returned the code - {response.status_code}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products)}'
+            assert len(search_products) == 70, f'Amount of elements - {len(search_products)} Error in url - {url}' 
 
     def popular_category_6(self, browser):
 
@@ -96,12 +102,13 @@ class SearchHelper(BasePage):
             search_popular_category.click()
             search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
             search_dropdown.click()
-            time.sleep (1.5)
+            time.sleep (2)
             search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
             response = requests.head(browser.current_url)
+            url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
             assert response.status_code == 200, f'The site returned the code - {response.status_code}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products)}'
+            assert len(search_products) == 70, f'Amount of elements - {len(search_products)} Error in url - {url}'
 
     def catalog(self, browser):
 
@@ -110,11 +117,12 @@ class SearchHelper(BasePage):
             search_catalog.click()
             search_element_catalog = self.find_elements(Locators.LOCATOR_ELEMENT_CATALOG)[i]
             search_element_catalog.click()
-            time.sleep (1.5)
+            time.sleep (2)
             search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
             response = requests.head(browser.current_url)
+            url = browser.current_url
             assert response.status_code == 200, f'The site returned the code - {response.status_code}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products)}'
+            assert len(search_products) == 70, f'Amount of elements - {len(search_products)} Error in url - {url}'
             
     def input(self, browser):
         search_input = self.find_element(Locators.LOCATOR_INPUT)
@@ -122,7 +130,7 @@ class SearchHelper(BasePage):
         search_input.clear()
         search_input.send_keys("iPhone")
         search_button_search.click()
-        time.sleep (1.5)
+        time.sleep (2)
         search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
         response = requests.head(browser.current_url)
         assert response.status_code == 200, f'The site returned the code - {response.status_code}'
@@ -147,7 +155,7 @@ class SearchHelper(BasePage):
             search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
             search_dropdown_text = search_dropdown.text
             search_dropdown.click()
-            time.sleep (1.5)
+            time.sleep (2)
             search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
             response = requests.head(browser.current_url)
             url = browser.current_url
@@ -172,7 +180,7 @@ class SearchHelper(BasePage):
             search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
             search_dropdown_text = search_dropdown.text
             search_dropdown.click()
-            time.sleep (1.5)
+            time.sleep (2)
             search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
             response = requests.head(browser.current_url)
             url = browser.current_url
