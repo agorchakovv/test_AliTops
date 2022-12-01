@@ -14,6 +14,7 @@ class SearchHelper(BasePage):
         response = requests.head(browser.current_url)
         assert response.status_code == 200, f'The site returned the code - {response.status_code}'
         assert len(search_products) == 30, f'Amount of elements - {len(search_products)}'
+        #Разделить количество товаров по подборкам
 
     def hot_compilation(self, browser):
         search_compilation = self.find_elements(Locators.LOCATOR_COMPILATION)[0]
@@ -80,7 +81,7 @@ class SearchHelper(BasePage):
             search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
             search_dropdown_text = search_dropdown.text
             search_dropdown.click()
-            time.sleep (1.5)
+            time.sleep (2)
             search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
             response = requests.head(browser.current_url)
             assert response.status_code == 200, f'The site returned the code - {response.status_code}'
