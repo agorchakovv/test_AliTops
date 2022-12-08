@@ -1,5 +1,5 @@
 import pytest
-from search_favorite import SearchHelper 
+from search.search_favorite import SearchHelper 
 from base_app import BasePage
 
 # #Добавление в избранное и авторизация

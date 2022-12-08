@@ -9,6 +9,7 @@ class SearchHelper(BasePage):
     def catalog(self, browser):
 
         for i in range(16):
+            browser.save_screenshot("./screensots/screen1.png")
             search_catalog = self.find_element(Locators.LOCATOR_CATALOG)
             ActionChains(browser).click(search_catalog).perform()
             search_element_catalog = self.find_elements(Locators.LOCATOR_ELEMENT_CATALOG)[i]
@@ -22,8 +23,9 @@ class SearchHelper(BasePage):
             search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
             response = requests.head(browser.current_url)
             url = browser.current_url
-            assert response.status_code == 200, f'The site returned the code - {response.status_code}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products)} Error in url - {url}'
+            assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen12.png")} Error in url - {url}'
+            assert len(search_products) == 70, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen13.png")} Error in url - {url}'
+
 
     def filter_catalog(self,browser):
 
@@ -51,6 +53,6 @@ class SearchHelper(BasePage):
             search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
             response = requests.head(browser.current_url)
             url = browser.current_url
-            assert response.status_code == 200, f'The site returned the code - {response.status_code}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products)}'
-            assert (filter[search_dropdown_text] in url), f'Error in url - {url}' 
+            assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen14.png")} Error in url - {url}'
+            assert len(search_products) == 70, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen15.png")} Error in url - {url}'
+            assert (filter[search_dropdown_text] in url), f'Error in url - {url, browser.save_screenshot("./screensots/screen16.png")}' 

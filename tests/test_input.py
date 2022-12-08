@@ -1,5 +1,5 @@
 import pytest
-from search_input import SearchHelper 
+from search.search_input import SearchHelper 
 from base_app import BasePage
 
 @pytest.fixture

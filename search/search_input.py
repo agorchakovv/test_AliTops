@@ -1,4 +1,5 @@
 import requests
+import time
 from base_app import BasePage
 from locators import Locators
 from selenium.webdriver.common.action_chains import ActionChains
@@ -12,12 +13,13 @@ class SearchHelper(BasePage):
         search_input.clear()
         search_input.send_keys("iPhone")
         ActionChains(browser).key_down(Keys.COMMAND).click(search_button_search).perform()
+        time.sleep (1)
         search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
         response = requests.head(browser.current_url)
-        assert response.status_code == 200, f'The site returned the code - {response.status_code}'
+        assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen17.png")}'
         
         for search in search_products:
-            assert ("iphone" in search.text.lower()), f'Error in product - {search.text}'
+            assert ("iphone" in search.text.lower()), f'Error in product - {search.text, browser.save_screenshot("./screensots/screen18.png")}'
 
     def filter_input(self,browser):
 
@@ -42,9 +44,10 @@ class SearchHelper(BasePage):
             for j in range(size):
                 browser.switch_to.window(handles[j])
 
+            time.sleep (2)
             search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
             response = requests.head(browser.current_url)
             url = browser.current_url
-            assert response.status_code == 200, f'The site returned the code - {response.status_code}'
-            assert len(search_products) == 60, f'Amount of elements - {len(search_products)}'
-            assert (filter[search_dropdown_text] in url), f'Error in url - {url}'   
+            assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen19.png")} Error in url - {url}'
+            assert len(search_products) == 60, f'Amount of elements - {len(search_products, browser.save_screenshot("./screensots/screen20.png"))} Error in url - {url}'
+            assert (filter[search_dropdown_text] in url), f'Error in url - {url, browser.save_screenshot("./screensots/screen21.png")}'   

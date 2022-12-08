@@ -1,5 +1,5 @@
 import pytest
-from search_gorizontal_categories import SearchHelper 
+from search.search_gorizontal_categories import SearchHelper 
 from base_app import BasePage
 
 @pytest.fixture

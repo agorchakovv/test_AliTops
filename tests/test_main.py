@@ -1,5 +1,5 @@
 import pytest
-from search_main import SearchHelper 
+from search.search_main import SearchHelper 
 from base_app import BasePage
 
 #Fixture open main page

@@ -1,5 +1,5 @@
 import pytest
-from search_catalog import SearchHelper 
+from search.search_catalog import SearchHelper 
 from base_app import BasePage
 
 @pytest.fixture

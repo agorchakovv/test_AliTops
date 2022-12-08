@@ -24,8 +24,8 @@ class SearchHelper(BasePage):
             response = requests.head(browser.current_url)
             url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
-            assert response.status_code == 200, f'The site returned the code - {response.status_code}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products)} Error in url - {url}'
+            assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen22.png")} Error in url - {url}'
+            assert len(search_products) == 70, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen23.png")} Error in url - {url}'
 
     def popular_category_1(self, browser):
 
@@ -44,8 +44,8 @@ class SearchHelper(BasePage):
             response = requests.head(browser.current_url)
             url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
-            assert response.status_code == 200, f'The site returned the code - {response.status_code}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products)} Error in url - {url}'
+            assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen24.png")} Error in url - {url}'
+            assert len(search_products) == 70, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen25.png")} Error in url - {url}'
 
     def popular_category_2(self, browser):
 
@@ -64,8 +64,8 @@ class SearchHelper(BasePage):
             response = requests.head(browser.current_url)
             url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
-            assert response.status_code == 200, f'The site returned the code - {response.status_code}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products)} Error in url - {url}'
+            assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen26.png")} Error in url - {url}'
+            assert len(search_products) == 70, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen27.png")} Error in url - {url}'
 
     def popular_category_3(self, browser):
 
@@ -84,8 +84,8 @@ class SearchHelper(BasePage):
             response = requests.head(browser.current_url)
             url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
-            assert response.status_code == 200, f'The site returned the code - {response.status_code}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products)} Error in url - {url}'
+            assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen28.png")} Error in url - {url}'
+            assert len(search_products) == 70, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen29.png")} Error in url - {url}'
 
     def popular_category_4(self, browser):
 
@@ -104,8 +104,8 @@ class SearchHelper(BasePage):
             response = requests.head(browser.current_url)
             url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
-            assert response.status_code == 200, f'The site returned the code - {response.status_code}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products)} Error in url - {url}'
+            assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen30.png")} Error in url - {url}'
+            assert len(search_products) == 70, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen31.png")} Error in url - {url}'
 
     def popular_category_5(self, browser):
 
@@ -124,8 +124,8 @@ class SearchHelper(BasePage):
             response = requests.head(browser.current_url)
             url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
-            assert response.status_code == 200, f'The site returned the code - {response.status_code}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products)} Error in url - {url}' 
+            assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen32.png")} Error in url - {url}'
+            assert len(search_products) == 70, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen33.png")} Error in url - {url}' 
 
     def popular_category_6(self, browser):
 
@@ -144,5 +144,5 @@ class SearchHelper(BasePage):
             response = requests.head(browser.current_url)
             url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
-            assert response.status_code == 200, f'The site returned the code - {response.status_code}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products)} Error in url - {url}'
+            assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen34.png")} Error in url - {url}'
+            assert len(search_products) == 70, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen35.png")} Error in url - {url}'
