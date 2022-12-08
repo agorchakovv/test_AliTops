@@ -1,8 +1,8 @@
 import requests
-import time
-# from fcntl import LOCK_EX
 from base_app import BasePage
 from locators import Locators
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
 
 #Search for elements
 class SearchHelper(BasePage):
@@ -53,39 +53,45 @@ class SearchHelper(BasePage):
         
         for i in range(6):
             search_filter = self.find_element(Locators.LOCATOR_FILTER)
-            search_filter.click()
+            ActionChains(browser).click(search_filter).perform()
             search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
             search_dropdown_text = search_dropdown.text
-            search_dropdown.click()
+            ActionChains(browser).key_down(Keys.COMMAND).click(search_dropdown).perform()
+            handles = browser.window_handles
+            size = len(handles)
+
+            for j in range(size):
+                browser.switch_to.window(handles[j])
+
             search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
             response = requests.head(browser.current_url)
             url = browser.current_url
             assert response.status_code == 200, f'The site returned the code - {response.status_code}'
             assert len(search_products) == 60, f'Amount of elements - {len(search_products)}'
-            assert (filter[search_dropdown_text] in url), f'Error in url - {url}'   
+            assert (filter[search_dropdown_text] in url), f'Error in url - {url}'  
 
-    def currency(self, browser):
+    # def currency(self, browser):
 
-        currency  = {
-            "RUB": "₽",
-            "USD": "$",
-            "EUR": "€",
-            "UAH": "₴",
-            "BYR": "BYR",
-            "BRL": "R$"
-        }
+    #     currency  = {
+    #         "RUB": "₽",
+    #         "USD": "$",
+    #         "EUR": "€",
+    #         "UAH": "₴",
+    #         "BYR": "BYR",
+    #         "BRL": "R$"
+    #     }
 
-        for i in range(6):
-            search_currency = self.find_element(Locators.LOCATOR_CURRANCY)
-            search_currency.click()
-            search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
-            search_dropdown_text = search_dropdown.text
-            search_dropdown.click()
-            time.sleep (2)
-            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
-            response = requests.head(browser.current_url)
-            assert response.status_code == 200, f'The site returned the code - {response.status_code}'
-            assert len(search_products) == 30, f'Amount of elements - {len(search_products)}'
+    #     for i in range(6):
+    #         search_currency = self.find_element(Locators.LOCATOR_CURRANCY)
+    #         search_currency.click()
+    #         search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
+    #         search_dropdown_text = search_dropdown.text
+    #         search_dropdown.click()
+    #         time.sleep (2)
+    #         search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
+    #         response = requests.head(browser.current_url)
+    #         assert response.status_code == 200, f'The site returned the code - {response.status_code}'
+    #         assert len(search_products) == 30, f'Amount of elements - {len(search_products)}'
 
-            for search in search_products:
-                assert (currency[search_dropdown_text.split()[0]] in search.text), f'Error in product - {search.text}'
+    #         for search in search_products:
+    #             assert (currency[search_dropdown_text.split()[0]] in search.text), f'Error in product - {search.text}'

@@ -17,11 +17,6 @@ def test_hot_compilation(browser):
     main_page = SearchHelper(browser)
     main_page.hot_compilation(browser)
 
-#Click on the hot compilation filter 
-def test_filter(browser):
-    main_page = SearchHelper(browser)
-    main_page.filter(browser)
-
 def test_bestsellers(back_browser):
     main_page = SearchHelper(back_browser)
     main_page.bestsellers(back_browser)
@@ -30,6 +25,11 @@ def test_buyers_recommend(back_browser):
     main_page = SearchHelper(back_browser)
     main_page.buyers_recommend(back_browser)
 
-def test_currency(back_browser):
-    main_page = SearchHelper(back_browser)
-    main_page.currency(back_browser)
+#Click on the buyers recommend filter 
+def test_filter(browser):
+    main_page = SearchHelper(browser)
+    main_page.filter(browser)
+
+# def test_currency(back_browser):
+#     main_page = SearchHelper(back_browser)
+#     main_page.currency(back_browser)
