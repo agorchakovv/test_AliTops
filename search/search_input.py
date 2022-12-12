@@ -13,7 +13,7 @@ class SearchHelper(BasePage):
         search_input.clear()
         search_input.send_keys("iPhone")
         ActionChains(browser).key_down(Keys.COMMAND).click(search_button_search).perform()
-        time.sleep (1)
+        time.sleep (2)
         search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
         response = requests.head(browser.current_url)
         assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen17.png")}'
@@ -37,13 +37,7 @@ class SearchHelper(BasePage):
             ActionChains(browser).click(search_filter).perform()
             search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
             search_dropdown_text = search_dropdown.text
-            ActionChains(browser).key_down(Keys.COMMAND).click(search_dropdown).perform()
-            handles = browser.window_handles
-            size = len(handles)
-
-            for j in range(size):
-                browser.switch_to.window(handles[j])
-
+            ActionChains(browser).click(search_dropdown).perform()
             time.sleep (2)
             search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
             response = requests.head(browser.current_url)

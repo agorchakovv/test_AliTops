@@ -56,13 +56,7 @@ class SearchHelper(BasePage):
             ActionChains(browser).click(search_filter).perform()
             search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
             search_dropdown_text = search_dropdown.text
-            ActionChains(browser).key_down(Keys.COMMAND).click(search_dropdown).perform()
-            handles = browser.window_handles
-            size = len(handles)
-
-            for j in range(size):
-                browser.switch_to.window(handles[j])
-
+            ActionChains(browser).click(search_dropdown).perform()
             search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
             response = requests.head(browser.current_url)
             url = browser.current_url
