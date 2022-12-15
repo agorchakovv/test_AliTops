@@ -7,7 +7,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 @pytest.fixture(scope="session")
 def browser():
     options = Options()
-    options.add_argument('headless')
+    # options.add_argument('headless')
     options.add_experimental_option('excludeSwitches', ['enable-logging', 'enable-automation'])
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     driver.set_window_size(1680,1050)

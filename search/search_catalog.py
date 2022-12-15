@@ -20,7 +20,7 @@ class SearchHelper(BasePage):
             for j in range(size):
                 browser.switch_to.window(handles[j])
                 
-            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
+            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
             response = requests.head(browser.current_url)
             url = browser.current_url
             assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen12.png")} Error in url - {url}'
@@ -44,7 +44,7 @@ class SearchHelper(BasePage):
             search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
             search_dropdown_text = search_dropdown.text
             ActionChains(browser).click(search_dropdown).perform()
-            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
+            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
             response = requests.head(browser.current_url)
             url = browser.current_url
             assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen14.png")} Error in url - {url}'

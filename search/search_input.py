@@ -14,7 +14,7 @@ class SearchHelper(BasePage):
         search_input.send_keys("iPhone")
         ActionChains(browser).key_down(Keys.COMMAND).click(search_button_search).perform()
         time.sleep (2)
-        search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
+        search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
         response = requests.head(browser.current_url)
         assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen17.png")}'
         
@@ -39,7 +39,7 @@ class SearchHelper(BasePage):
             search_dropdown_text = search_dropdown.text
             ActionChains(browser).click(search_dropdown).perform()
             time.sleep (2)
-            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
+            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
             response = requests.head(browser.current_url)
             url = browser.current_url
             assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen19.png")} Error in url - {url}'

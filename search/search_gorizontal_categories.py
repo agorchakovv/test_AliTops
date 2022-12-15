@@ -20,7 +20,7 @@ class SearchHelper(BasePage):
             for j in range(size):
                 browser.switch_to.window(handles[j])
 
-            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
+            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
             response = requests.head(browser.current_url)
             url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
@@ -40,7 +40,7 @@ class SearchHelper(BasePage):
             for j in range(size):
                 browser.switch_to.window(handles[j])
 
-            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
+            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
             response = requests.head(browser.current_url)
             url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
@@ -60,7 +60,7 @@ class SearchHelper(BasePage):
             for j in range(size):
                 browser.switch_to.window(handles[j])
 
-            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
+            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
             response = requests.head(browser.current_url)
             url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
@@ -80,7 +80,7 @@ class SearchHelper(BasePage):
             for j in range(size):
                 browser.switch_to.window(handles[j])
 
-            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
+            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
             response = requests.head(browser.current_url)
             url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
@@ -100,7 +100,7 @@ class SearchHelper(BasePage):
             for j in range(size):
                 browser.switch_to.window(handles[j])
 
-            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
+            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
             response = requests.head(browser.current_url)
             url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
@@ -120,7 +120,7 @@ class SearchHelper(BasePage):
             for j in range(size):
                 browser.switch_to.window(handles[j])
 
-            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
+            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
             response = requests.head(browser.current_url)
             url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
@@ -140,7 +140,7 @@ class SearchHelper(BasePage):
             for j in range(size):
                 browser.switch_to.window(handles[j])
 
-            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
+            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
             response = requests.head(browser.current_url)
             url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"

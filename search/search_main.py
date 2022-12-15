@@ -10,7 +10,7 @@ class SearchHelper(BasePage):
     def main_page(self, browser):
         main_page = BasePage(browser)
         main_page.go_to_site()
-        search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
+        search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
         response = requests.head(browser.current_url)
         assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen1.png")}'
         assert len(search_products) == 30, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen2.png")}'
@@ -19,7 +19,7 @@ class SearchHelper(BasePage):
     def hot_compilation(self, browser):
         search_compilation = self.find_elements(Locators.LOCATOR_COMPILATION)[0]
         search_compilation.click()
-        search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
+        search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
         response = requests.head(browser.current_url)
         assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen3.png")}'
         assert len(search_products) == 60, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen4.png")}'
@@ -27,7 +27,7 @@ class SearchHelper(BasePage):
     def bestsellers(self, browser):
         search_compilation = self.find_elements(Locators.LOCATOR_COMPILATION)[1]
         search_compilation.click()
-        search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
+        search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
         response = requests.head(browser.current_url)
         assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen5.png")}'
         assert len(search_products) == 60, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen6.png")}'
@@ -35,7 +35,7 @@ class SearchHelper(BasePage):
     def buyers_recommend(self, browser):
         search_compilation = self.find_elements(Locators.LOCATOR_COMPILATION)[2]
         search_compilation.click()
-        search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
+        search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
         response = requests.head(browser.current_url)
         assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen7.png")}'
         assert len(search_products) == 60, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen8.png")}'
@@ -57,7 +57,7 @@ class SearchHelper(BasePage):
             search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
             search_dropdown_text = search_dropdown.text
             ActionChains(browser).click(search_dropdown).perform()
-            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS)
+            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
             response = requests.head(browser.current_url)
             url = browser.current_url
             assert response.status_code == 200, f'The site returned the code - {response.status_code,  browser.save_screenshot("./screensots/screen9.png")} Error in url - {url}'
