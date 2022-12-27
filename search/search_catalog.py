@@ -20,12 +20,19 @@ class SearchHelper(BasePage):
             for j in range(size):
                 browser.switch_to.window(handles[j])
                 
-            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
+            search_products_catalog = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
+            search_products_shuffle = self.find_elements(Locators.LOCATOR_PRODUCTS_SHUFFLE)
             response = requests.head(browser.current_url)
             url = browser.current_url
-            assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen12.png")} Error in url - {url}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen13.png")} Error in url - {url}'
-
+            assert response.status_code == 200, f'The site returned the code - \
+                                                {response.status_code, browser.save_screenshot("./screensots/screen12.png")} \
+                                                Error in url - {url}'
+            assert len(search_products_catalog) == 60, f'Amount of elements catalog - \
+                                                        {len(search_products_catalog), browser.save_screenshot("./screensots/screen13.png")} \
+                                                        Error in url - {url}'
+            assert len(search_products_shuffle) == 10, f'Amount of elements shuffle - \
+                                                        {len(search_products_shuffle), browser.save_screenshot("./screensots/scree13.1.png")} \
+                                                        Error in url - {url}'
 
     def filter_catalog(self,browser):
 
@@ -47,6 +54,11 @@ class SearchHelper(BasePage):
             search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
             response = requests.head(browser.current_url)
             url = browser.current_url
-            assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen14.png")} Error in url - {url}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen15.png")} Error in url - {url}'
-            assert (filter[search_dropdown_text] in url), f'Error in url - {url, browser.save_screenshot("./screensots/screen16.png")}' 
+            assert response.status_code == 200, f'The site returned the code - \
+                                                {response.status_code, browser.save_screenshot("./screensots/screen14.png")} \
+                                                Error in url - {url}'
+            assert len(search_products) == 70, f'Amount of elements - \
+                                                {len(search_products), browser.save_screenshot("./screensots/screen15.png")} \
+                                                Error in url - {url}'
+            assert (filter[search_dropdown_text] in url), f'Error in url - \
+                                                            {url, browser.save_screenshot("./screensots/screen16.png")}' 

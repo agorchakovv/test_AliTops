@@ -10,35 +10,48 @@ class SearchHelper(BasePage):
     def main_page(self, browser):
         main_page = BasePage(browser)
         main_page.go_to_site()
-        search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
+        search_products_compilation1 = self.find_elements(Locators.LOCATOR_PRODUCTS_COMPILATION1)
+        search_products_compilation2 = self.find_elements(Locators.LOCATOR_PRODUCTS_COMPILATION2)
+        search_products_compilation3 = self.find_elements(Locators.LOCATOR_PRODUCTS_COMPILATION3)
         response = requests.head(browser.current_url)
-        assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen1.png")}'
-        assert len(search_products) == 30, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen2.png")}'
-        #Разделить количество товаров по подборкам
+        assert response.status_code == 200, f'The site returned the code - \
+                                            {response.status_code, browser.save_screenshot("./screensots/screen1.png")}'
+        assert len(search_products_compilation1) == 10, f'Amount of elements - \
+                                                        {len(search_products_compilation1), browser.save_screenshot("./screensots/screen2.png")}'
+        assert len(search_products_compilation2) == 10, f'Amount of elements - \
+                                                        {len(search_products_compilation2), browser.save_screenshot("./screensots/screen2.1.png")}'
+        assert len(search_products_compilation3) == 10, f'Amount of elements - \
+                                                        {len(search_products_compilation3), browser.save_screenshot("./screensots/screen2.2.png")}'
 
     def hot_compilation(self, browser):
         search_compilation = self.find_elements(Locators.LOCATOR_COMPILATION)[0]
         search_compilation.click()
-        search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
+        search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_SEARCH)
         response = requests.head(browser.current_url)
-        assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen3.png")}'
-        assert len(search_products) == 60, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen4.png")}'
+        assert response.status_code == 200, f'The site returned the code - \
+                                            {response.status_code, browser.save_screenshot("./screensots/screen3.png")}'
+        assert len(search_products) == 60, f'Amount of elements - \
+                                            {len(search_products), browser.save_screenshot("./screensots/screen4.png")}'
 
     def bestsellers(self, browser):
         search_compilation = self.find_elements(Locators.LOCATOR_COMPILATION)[1]
         search_compilation.click()
-        search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
+        search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_SEARCH)
         response = requests.head(browser.current_url)
-        assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen5.png")}'
-        assert len(search_products) == 60, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen6.png")}'
+        assert response.status_code == 200, f'The site returned the code - \
+                                            {response.status_code, browser.save_screenshot("./screensots/screen5.png")}'
+        assert len(search_products) == 60, f'Amount of elements - \
+                                            {len(search_products), browser.save_screenshot("./screensots/screen6.png")}'
 
     def buyers_recommend(self, browser):
         search_compilation = self.find_elements(Locators.LOCATOR_COMPILATION)[2]
         search_compilation.click()
-        search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
+        search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_SEARCH)
         response = requests.head(browser.current_url)
-        assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen7.png")}'
-        assert len(search_products) == 60, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen8.png")}'
+        assert response.status_code == 200, f'The site returned the code - \
+                                            {response.status_code, browser.save_screenshot("./screensots/screen7.png")}'
+        assert len(search_products) == 60, f'Amount of elements - \
+                                            {len(search_products), browser.save_screenshot("./screensots/screen8.png")}'
 
     def filter(self,browser):
 
@@ -57,12 +70,17 @@ class SearchHelper(BasePage):
             search_dropdown = self.find_elements(Locators.LOCATOR_DROPDOWN)[i]
             search_dropdown_text = search_dropdown.text
             ActionChains(browser).click(search_dropdown).perform()
-            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
+            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_SEARCH)
             response = requests.head(browser.current_url)
             url = browser.current_url
-            assert response.status_code == 200, f'The site returned the code - {response.status_code,  browser.save_screenshot("./screensots/screen9.png")} Error in url - {url}'
-            assert len(search_products) == 60, f'Amount of elements - {len(search_products, browser.save_screenshot("./screensots/screen10.png"))} Error in url - {url}'
-            assert (filter[search_dropdown_text] in url), f'Error in url - {url, browser.save_screenshot("./screensots/screen11.png")}'  
+            assert response.status_code == 200, f'The site returned the code - \
+                                                {response.status_code,  browser.save_screenshot("./screensots/screen9.png")} \
+                                                Error in url - {url}'
+            assert len(search_products) == 60, f'Amount of elements - \
+                                                {len(search_products, browser.save_screenshot("./screensots/screen10.png"))} \
+                                                Error in url - {url}'
+            assert (filter[search_dropdown_text] in url), f'Error in url - \
+                                                            {url, browser.save_screenshot("./screensots/screen11.png")}'  
 
     # def currency(self, browser):
 

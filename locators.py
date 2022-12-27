@@ -1,8 +1,12 @@
 from selenium.webdriver.common.by import By
 
 class Locators:
-    LOCATOR_PRODUCTS_CATALOG = (By.XPATH, '//*[@id="product_list"]/li')
-    LOCATOR_PRODUCTS_COMPILATION = (By.XPATH, '//*[@id="product_list"]/li')
+    LOCATOR_PRODUCTS_CATALOG = (By.XPATH, '//*[@id="category_products"]/li')
+    LOCATOR_PRODUCTS_SHUFFLE = (By.XPATH, '//*[@id="collection_products"]/li')
+    LOCATOR_PRODUCTS_SEARCH = (By.XPATH, '//*[@id="product_list"]/li')
+    LOCATOR_PRODUCTS_COMPILATION1 = (By.XPATH, '//*[@id="collection_product_1"]/li')
+    LOCATOR_PRODUCTS_COMPILATION2 = (By.XPATH, '//*[@id="collection_product_2"]/li')
+    LOCATOR_PRODUCTS_COMPILATION3 = (By.XPATH, '//*[@id="collection_product_3"]/li')
     LOCATOR_COMPILATION = (By.XPATH, '//a[@id="collection_link"]')
     LOCATOR_FILTER = (By.XPATH, '//button[@id="filter_dropdown"]')
     LOCATOR_CURRANCY = (By.XPATH, '//button[@id="footer_change_currancy"]')

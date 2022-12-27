@@ -19,13 +19,21 @@ class SearchHelper(BasePage):
 
             for j in range(size):
                 browser.switch_to.window(handles[j])
-
-            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
+                
+            search_products_catalog = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
+            search_products_shuffle = self.find_elements(Locators.LOCATOR_PRODUCTS_SHUFFLE)
             response = requests.head(browser.current_url)
             url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
-            assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen22.png")} Error in url - {url}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen23.png")} Error in url - {url}'
+            assert response.status_code == 200, f'The site returned the code - \
+                                                {response.status_code, browser.save_screenshot("./screensots/screen22.png")} \
+                                                Error in url - {url}'
+            assert len(search_products_catalog) == 60, f'Amount of elements catalog - \
+                                                        {len(search_products_catalog), browser.save_screenshot("./screensots/screen23.png")} \
+                                                        Error in url - {url}'
+            assert len(search_products_shuffle) == 10, f'Amount of elements shuffle - \
+                                                        {len(search_products_shuffle), browser.save_screenshot("./screensots/screen23.1.png")} \
+                                                        Error in url - {url}'
 
     def popular_category_1(self, browser):
 
@@ -40,12 +48,20 @@ class SearchHelper(BasePage):
             for j in range(size):
                 browser.switch_to.window(handles[j])
 
-            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
+            search_products_catalog = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
+            search_products_shuffle = self.find_elements(Locators.LOCATOR_PRODUCTS_SHUFFLE)
             response = requests.head(browser.current_url)
             url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
-            assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen24.png")} Error in url - {url}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen25.png")} Error in url - {url}'
+            assert response.status_code == 200, f'The site returned the code - \
+                                                {response.status_code, browser.save_screenshot("./screensots/screen24.png")} \
+                                                Error in url - {url}'
+            assert len(search_products_catalog) == 60, f'Amount of elements catalog - \
+                                                        {len(search_products_catalog), browser.save_screenshot("./screensots/screen25.png")} \
+                                                        Error in url - {url}'
+            assert len(search_products_shuffle) == 10, f'Amount of elements shuffle - \
+                                                        {len(search_products_shuffle), browser.save_screenshot("./screensots/screen25.1.png")} \
+                                                        Error in url - {url}'
 
     def popular_category_2(self, browser):
 
@@ -60,12 +76,20 @@ class SearchHelper(BasePage):
             for j in range(size):
                 browser.switch_to.window(handles[j])
 
-            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
+            search_products_catalog = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
+            search_products_shuffle = self.find_elements(Locators.LOCATOR_PRODUCTS_SHUFFLE)
             response = requests.head(browser.current_url)
             url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
-            assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen26.png")} Error in url - {url}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen27.png")} Error in url - {url}'
+            assert response.status_code == 200, f'The site returned the code - \
+                                                {response.status_code, browser.save_screenshot("./screensots/screen26.png")} \
+                                                Error in url - {url}'
+            assert len(search_products_catalog) == 60, f'Amount of elements catalog - \
+                                                        {len(search_products_catalog), browser.save_screenshot("./screensots/screen27.png")} \
+                                                        Error in url - {url}'
+            assert len(search_products_shuffle) == 10, f'Amount of elements shuffle - \
+                                                        {len(search_products_shuffle), browser.save_screenshot("./screensots/screen27.1.png")} \
+                                                        Error in url - {url}'
 
     def popular_category_3(self, browser):
 
@@ -80,12 +104,20 @@ class SearchHelper(BasePage):
             for j in range(size):
                 browser.switch_to.window(handles[j])
 
-            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
+            search_products_catalog = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
+            search_products_shuffle = self.find_elements(Locators.LOCATOR_PRODUCTS_SHUFFLE)
             response = requests.head(browser.current_url)
             url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
-            assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen28.png")} Error in url - {url}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen29.png")} Error in url - {url}'
+            assert response.status_code == 200, f'The site returned the code - \
+                                                {response.status_code, browser.save_screenshot("./screensots/screen28.png")} \
+                                                Error in url - {url}'
+            assert len(search_products_catalog) == 60, f'Amount of elements catalog - \
+                                                        {len(search_products_catalog), browser.save_screenshot("./screensots/screen29.png")} \
+                                                        Error in url - {url}'
+            assert len(search_products_shuffle) == 10, f'Amount of elements shuffle - \
+                                                        {len(search_products_shuffle), browser.save_screenshot("./screensots/screen29.1.png")} \
+                                                        Error in url - {url}'
 
     def popular_category_4(self, browser):
 
@@ -100,12 +132,20 @@ class SearchHelper(BasePage):
             for j in range(size):
                 browser.switch_to.window(handles[j])
 
-            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
+            search_products_catalog = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
+            search_products_shuffle = self.find_elements(Locators.LOCATOR_PRODUCTS_SHUFFLE)
             response = requests.head(browser.current_url)
             url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
-            assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen30.png")} Error in url - {url}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen31.png")} Error in url - {url}'
+            assert response.status_code == 200, f'The site returned the code - \
+                                                {response.status_code, browser.save_screenshot("./screensots/screen30.png")} \
+                                                Error in url - {url}'
+            assert len(search_products_catalog) == 60, f'Amount of elements catalog - \
+                                                        {len(search_products_catalog), browser.save_screenshot("./screensots/screen31.png")} \
+                                                        Error in url - {url}'
+            assert len(search_products_shuffle) == 10, f'Amount of elements shuffle - \
+                                                        {len(search_products_shuffle), browser.save_screenshot("./screensots/screen31.1.png")} \
+                                                        Error in url - {url}'
 
     def popular_category_5(self, browser):
 
@@ -120,12 +160,20 @@ class SearchHelper(BasePage):
             for j in range(size):
                 browser.switch_to.window(handles[j])
 
-            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
+            search_products_catalog = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
+            search_products_shuffle = self.find_elements(Locators.LOCATOR_PRODUCTS_SHUFFLE)
             response = requests.head(browser.current_url)
             url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
-            assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen32.png")} Error in url - {url}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen33.png")} Error in url - {url}' 
+            assert response.status_code == 200, f'The site returned the code - \
+                                                {response.status_code, browser.save_screenshot("./screensots/screen32.png")} \
+                                                Error in url - {url}'
+            assert len(search_products_catalog) == 60, f'Amount of elements catalog - \
+                                                        {len(search_products_catalog), browser.save_screenshot("./screensots/screen33.png")} \
+                                                        Error in url - {url}'
+            assert len(search_products_shuffle) == 10, f'Amount of elements shuffle - \
+                                                        {len(search_products_shuffle), browser.save_screenshot("./screensots/screen33.1.png")} \
+                                                        Error in url - {url}' 
 
     def popular_category_6(self, browser):
 
@@ -140,9 +188,17 @@ class SearchHelper(BasePage):
             for j in range(size):
                 browser.switch_to.window(handles[j])
 
-            search_products = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
+            search_products_catalog = self.find_elements(Locators.LOCATOR_PRODUCTS_CATALOG)
+            search_products_shuffle = self.find_elements(Locators.LOCATOR_PRODUCTS_SHUFFLE)
             response = requests.head(browser.current_url)
             url = browser.current_url
             # assert browser.current_url == "https://alitops.ru/category/mobilnye-telefony/smartfony-c001788", f"received url is - {browser.current_url}"
-            assert response.status_code == 200, f'The site returned the code - {response.status_code, browser.save_screenshot("./screensots/screen34.png")} Error in url - {url}'
-            assert len(search_products) == 70, f'Amount of elements - {len(search_products), browser.save_screenshot("./screensots/screen35.png")} Error in url - {url}'
+            assert response.status_code == 200, f'The site returned the code - \
+                                                {response.status_code, browser.save_screenshot("./screensots/screen34.png")} \
+                                                Error in url - {url}'
+            assert len(search_products_catalog) == 60, f'Amount of elements catalog - \
+                                                        {len(search_products_catalog), browser.save_screenshot("./screensots/screen35.png")} \
+                                                        Error in url - {url}'
+            assert len(search_products_shuffle) == 10, f'Amount of elements shuffle - \
+                                                        {len(search_products_shuffle), browser.save_screenshot("./screensots/scree35.1.png")} \
+                                                        Error in url - {url}'
